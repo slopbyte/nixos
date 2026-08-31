@@ -1,1 +1,4 @@
-sudo nix-collect-garbage -d && sudo nix-store --optimise
+sudo nix-env --delete-generations --delete-old && \
+sudo nix-collect-garbage -d && \
+sudo nix-store --optimise && \
+sudo /run/current-system/bin/switch-to-configuration boot
